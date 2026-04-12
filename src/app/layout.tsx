@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Noto_Sans, Roboto_Slab } from "next/font/google";
 
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-import { ModeToggle } from "@/components/ui/theme-toggle";
+import { Navbar } from "@/components/layout/Navbar";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
@@ -57,38 +51,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <header className="bg-background sticky top-0 z-10 border-b">
-            <div className="mx-auto flex w-full max-w-4xl items-center justify-between px-4">
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <a href="#about" className="block px-4 py-3 font-sans">
-                        About
-                      </a>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <a href="#projects" className="block px-4 py-2 font-sans">
-                        Projects
-                      </a>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <a href="#contact" className="block px-4 py-2 font-sans">
-                        Contact
-                      </a>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-
-              <ModeToggle />
-            </div>
-          </header>
-
+          <Navbar />
           <main className="mx-auto w-full max-w-4xl flex-1 px-4">{children}</main>
         </ThemeProvider>
       </body>
