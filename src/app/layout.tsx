@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Noto_Sans, Roboto_Slab } from "next/font/google";
 
 import { Navbar } from "@/components/layout/Navbar";
+import { Toaster } from "@/components/ui/sonner";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
@@ -53,6 +54,8 @@ export default function RootLayout({
         >
           <Navbar />
           <main className="mx-auto w-full max-w-4xl flex-1 px-4">{children}</main>
+
+          <Toaster position="top-right" />
         </ThemeProvider>
       </body>
     </html>

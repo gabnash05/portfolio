@@ -15,7 +15,6 @@ export default function ExperienceSection() {
       award: "With Highest Honors",
       duration: "2017 – 2022",
     },
-    // Add more items here
   ];
 
   return (
@@ -35,7 +34,7 @@ export default function ExperienceSection() {
           <TabsContent value="education" className="mt-6 flex justify-center">
             <div className="relative pl-6">
               {/* Vertical Timeline Line */}
-              <div className="via-border absolute top-0 bottom-0 left-[11px] w-px bg-gradient-to-b from-[#87CEEB] to-transparent" />
+              <div className="via-border absolute top-0 bottom-0 left-[11px] w-px bg-linear-to-b from-[#87CEEB] to-transparent" />
 
               {/* Current Education - Featured with prominent hat */}
               <div className="relative pb-8">
@@ -69,7 +68,7 @@ export default function ExperienceSection() {
           <TabsContent value="work">
             <div className="flex justify-center">
               <div className="text-muted-foreground p-10 text-center text-sm">
-                This could be you. Just saying.
+                None yet. But this could be you. Just saying.
               </div>
             </div>
           </TabsContent>

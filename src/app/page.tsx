@@ -1,6 +1,7 @@
 import AboutSection from "@/components/about/AboutSection";
 import ProjectsSection from "@/components/projects/ProjectsSection";
 import ExperienceSection from "@/components/experience/ExperienceSection";
+import ContactSection from "@/components/contact/ContactSection";
 
 export default function Home() {
   return (
@@ -22,8 +23,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="min-h-lh py-5">
-        <h2 className="font-heading mb-8 text-3xl font-bold">Contact</h2>
-        <p>Your contact content here...</p>
+        <ContactSection />
       </section>
     </>
   );
