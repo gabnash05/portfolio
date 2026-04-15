@@ -1,4 +1,5 @@
 import About from "@/components/about/About";
+import Projects from "@/components/projects/Projects";
 
 export default function Home() {
   return (
@@ -10,8 +11,7 @@ export default function Home() {
 
       {/* Projects Section */}
       <section id="projects" className="py-5">
-        <h2 className="font-heading mb-8 text-3xl font-bold">Projects</h2>
-        <p>Your projects content here...</p>
+        <Projects />
       </section>
 
       {/* Education Section */}

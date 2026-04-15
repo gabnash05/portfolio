@@ -25,10 +25,6 @@ export default function About() {
             <AnimatedShinyText className="font-bold italic" color="hsl(var(--accent))" delay={1.2}>
               AI integration
             </AnimatedShinyText>{" "}
-            and{" "}
-            <AnimatedShinyText className="font-bold italic" color="hsl(var(--accent))" delay={1.8}>
-              Machine Learning
-            </AnimatedShinyText>
             .
           </p>
 
@@ -78,7 +74,7 @@ export default function About() {
           </div>
         </div>
 
-        <ProfilePhoto className="shrink-0" size={250} />
+        <ProfilePhoto className="shrink-0" size={210} />
       </div>
     </section>
   );

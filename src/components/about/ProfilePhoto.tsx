@@ -32,7 +32,6 @@ export function ProfilePhoto({ className, size = 300 }: ProfilePhotoProps) {
           squares={[20, 20]}
           className="absolute inset-0 h-full w-full origin-center"
           style={{ transform: GRID_TRANSFORM }}
-          squaresClassName="stroke-border hover:fill-muted"
         />
       </div>
 
