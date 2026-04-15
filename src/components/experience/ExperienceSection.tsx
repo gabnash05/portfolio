@@ -21,59 +21,61 @@ export default function ExperienceSection() {
     <section id="experience" className="w-full space-y-6">
       <h2 className="font-heading text-center text-3xl font-bold">Experience & Education</h2>
 
-      <div className="flex flex-col items-center justify-center">
-        <Tabs defaultValue="education" className="w-full max-w-3xl">
-          <div className="flex justify-center">
-            <AnimatedTabsList>
-              <TabsTrigger value="education">Education</TabsTrigger>
-              <TabsTrigger value="work">Work</TabsTrigger>
-            </AnimatedTabsList>
-          </div>
+      <Tabs defaultValue="education" className="mx-auto max-w-150">
+        {/* Tabs */}
+        <div className="flex justify-center">
+          <AnimatedTabsList>
+            <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="work">Work</TabsTrigger>
+          </AnimatedTabsList>
+        </div>
 
-          {/* EDUCATION */}
-          <TabsContent value="education" className="mt-6 flex justify-center">
-            <div className="relative pl-6">
-              {/* Vertical Timeline Line */}
-              <div className="via-border absolute top-0 bottom-0 left-[11px] w-px bg-linear-to-b from-[#87CEEB] to-transparent" />
+        {/* EDUCATION */}
+        <TabsContent value="education" className="mt-6">
+          <div className="relative w-full">
+            {/* Timeline line (desktop only) */}
+            <div className="via-border absolute top-2 bottom-0 left-4 hidden w-px bg-linear-to-b from-[#87CEEB] to-transparent md:block" />
 
-              {/* Current Education - Featured with prominent hat */}
-              <div className="relative pb-8">
-                <div className="ring-background absolute top-1 left-0 flex h-6 w-6 -translate-x-[3px] items-center justify-center rounded-full bg-[#87CEEB] ring-4">
-                  <GraduationCap className="text-primary-foreground h-3.5 w-3.5" />
+            {/* CURRENT */}
+            <div className="relative pb-6 md:pb-8">
+              {/* Icon (desktop only) */}
+              <div className="ring-background absolute top-2 left-4 hidden h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full bg-[#87CEEB] ring-4 md:flex">
+                <GraduationCap className="text-primary-foreground h-3.5 w-3.5" />
+              </div>
+
+              <div className="w-full md:pl-10">
+                <MagicCard className="w-full rounded-xl" mode="gradient">
+                  <CurrentEducationCard />
+                </MagicCard>
+              </div>
+            </div>
+
+            {/* PAST */}
+            {timelineItems.map((item, index) => (
+              <div key={index} className="relative pb-6 last:pb-0">
+                <div className="bg-muted ring-background absolute top-2 left-4 hidden h-5 w-5 -translate-x-1/2 items-center justify-center rounded-full ring-4 md:flex">
+                  <GraduationCap className="text-muted-foreground h-3 w-3" />
                 </div>
-                <div className="ml-10">
-                  <MagicCard className="flex h-full flex-col rounded-xl" mode="gradient">
-                    <CurrentEducationCard />
+
+                <div className="w-full md:pl-8">
+                  <MagicCard className="w-full rounded-xl" mode="gradient">
+                    <TimelineCard {...item} />
                   </MagicCard>
                 </div>
               </div>
+            ))}
+          </div>
+        </TabsContent>
 
-              {/* Past Timeline Items with subtle hats */}
-              {timelineItems.map((item, index) => (
-                <div key={index} className="relative pb-6 last:pb-0">
-                  <div className="bg-muted ring-background absolute top-1 left-0 flex h-5 w-5 -translate-x-[2px] items-center justify-center rounded-full ring-4">
-                    <GraduationCap className="text-muted-foreground h-3 w-3" />
-                  </div>
-                  <div className="ml-8">
-                    <MagicCard className="flex h-full flex-col rounded-xl" mode="gradient">
-                      <TimelineCard {...item} />
-                    </MagicCard>
-                  </div>
-                </div>
-              ))}
+        {/* WORK */}
+        <TabsContent value="work">
+          <div className="flex justify-center">
+            <div className="text-muted-foreground p-10 text-center text-sm">
+              None yet. But this could be you. Just saying.
             </div>
-          </TabsContent>
-
-          {/* WORK */}
-          <TabsContent value="work">
-            <div className="flex justify-center">
-              <div className="text-muted-foreground p-10 text-center text-sm">
-                None yet. But this could be you. Just saying.
-              </div>
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>
+          </div>
+        </TabsContent>
+      </Tabs>
     </section>
   );
 }

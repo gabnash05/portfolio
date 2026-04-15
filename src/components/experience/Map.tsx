@@ -113,8 +113,8 @@ export function Map({ lat, lng }: MapProps) {
   }
 
   return (
-    <div className="relative h-64 w-full overflow-hidden rounded-xl">
-      <div ref={mapContainerRef} className="h-full w-full" />
+    <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl sm:aspect-[16/10] md:aspect-[16/9]">
+      <div ref={mapContainerRef} className="absolute inset-0 h-full w-full" />
     </div>
   );
 }

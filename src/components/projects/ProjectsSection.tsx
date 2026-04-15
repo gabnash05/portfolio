@@ -121,7 +121,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="scroll-mt-16 py-16">
       <h2 className="font-heading mb-8 text-3xl font-bold">Projects</h2>
-      <BentoGrid className="grid-cols-2">
+      <BentoGrid>
         {projects.map((project) => (
           <BentoCard
             key={project.name}
