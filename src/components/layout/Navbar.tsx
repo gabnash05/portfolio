@@ -32,8 +32,8 @@ export function Navbar() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
-                <a href="#education" className="block px-4 py-2 font-sans">
-                  Education
+                <a href="#experience" className="block px-4 py-2 font-sans">
+                  Experience
                 </a>
               </NavigationMenuLink>
             </NavigationMenuItem>

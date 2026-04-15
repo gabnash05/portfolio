@@ -3,29 +3,28 @@ import { ProfilePhoto } from "@/components/about/ProfilePhoto";
 import { Download } from "lucide-react";
 import { FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
-export default function About() {
+export default function AboutSection() {
   return (
     <section id="about" className="scroll-mt-16">
       <div className="flex flex-col items-center gap-8 md:flex-row lg:gap-16">
         <div className="flex-1">
-          <h1 className="font-heading mb-4 text-4xl font-bold">Hi, I'm Gab</h1>
+          <h1 className="font-heading mb-4 text-4xl font-bold">Hi, I&apos;m Gab</h1>
           <p className="my-5 max-w-100 leading-relaxed font-light">
-            I'm a 21 year old Aspiring Software Engineer from the Philippines
+            I&apos;m a 21 year old Aspiring Software Engineer from the Philippines
           </p>
           <p className="max-w-100 leading-relaxed">
             A{" "}
             <AnimatedShinyText className="font-bold italic" color="hsl(var(--accent))" delay={0}>
               Full-stack
             </AnimatedShinyText>{" "}
-            enthusiast that's{" "}
+            enthusiast that&apos;s{" "}
             <AnimatedShinyText className="font-bold italic" color="hsl(var(--accent))" delay={0.6}>
               backend
             </AnimatedShinyText>{" "}
             focused and dabbles in{" "}
             <AnimatedShinyText className="font-bold italic" color="hsl(var(--accent))" delay={1.2}>
-              AI integration
+              AI integration.
             </AnimatedShinyText>{" "}
-            .
           </p>
 
           <div className="text-muted-foreground mt-6 flex items-center gap-4 text-sm">

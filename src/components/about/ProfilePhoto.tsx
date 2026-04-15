@@ -48,7 +48,7 @@ export function ProfilePhoto({ className, size = 300 }: ProfilePhotoProps) {
             src="/profile.jpg"
             alt="Gab's profile photo"
             fill
-            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
           />
         </motion.div>

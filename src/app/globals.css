@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+@import "leaflet/dist/leaflet.css";
 
 html {
   scroll-behavior: smooth;
@@ -149,4 +150,41 @@ html {
 ::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
+}
+
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping {
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.custom-pulsing-dot {
+  background: transparent;
+}
+
+/* Leaflet container fixes */
+.leaflet-container {
+  z-index: 0;
+}
+
+.leaflet-control-container .leaflet-top.leaflet-right {
+  z-index: 10;
+}
+
+/* Fix for center button */
+.leaflet-control button {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border: none;
+  cursor: pointer;
+}
+
+.leaflet-control button:hover {
+  background-color: hsl(var(--muted));
 }

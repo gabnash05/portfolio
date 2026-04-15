@@ -60,9 +60,7 @@ export function InteractiveGridPattern({
 
               "stroke-black/20 dark:stroke-white/20",
 
-              hoveredSquare === index
-                ? "fill-black/80 dark:fill-white/80"
-                : "fill-transparent",
+              hoveredSquare === index ? "fill-black/80 dark:fill-white/80" : "fill-transparent",
 
               hoveredSquare === index
                 ? "drop-shadow-[0_0_12px_rgba(0,0,0,0.6)] dark:drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]"

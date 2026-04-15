@@ -1,22 +1,36 @@
-"use client"
+"use client";
 
-import { BentoCard, BentoGrid } from "@/components/ui/bento-grid"
-import { SiReact, SiTypescript, SiTailwindcss, SiCss, SiFlask, SiPostgresql, SiDocker, SiQt, SiPython, SiExpo, SiExpress, SiVuedotjs, SiMysql } from "react-icons/si"
+import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
+import {
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiFlask,
+  SiPostgresql,
+  SiDocker,
+  SiQt,
+  SiPython,
+  SiExpo,
+  SiExpress,
+  SiVuedotjs,
+  SiMysql,
+} from "react-icons/si";
 import {
   ArchitectureServiceAWSLambda,
   ResourceAmazonSimpleStorageServiceBucket,
   ArchitectureServiceAmazonDynamoDB,
   ArchitectureServiceAmazonTextract,
   ArchitectureServiceAmazonBedrock,
-  ResourceAmazonElasticContainerServiceContainer2
+  ResourceAmazonElasticContainerServiceContainer2,
 } from "aws-react-icons";
-import { CodeIcon } from "lucide-react"
-import type { Technology } from "@/components/ui/bento-grid"
+import { CodeIcon } from "lucide-react";
+import type { Technology } from "@/components/ui/bento-grid";
 
 const projects = [
   {
     name: "EFAS: Evacuation Facility Administration System",
-    description: "Web-based disaster platform for LGUs to coordinate evacuations, track households, and manage aid distribution.",
+    description:
+      "Web-based disaster platform for LGUs to coordinate evacuations, track households, and manage aid distribution.",
     href: "https://github.com/gabnash05/evacuation-facility-administration-system",
     technologies: [
       ["React", SiReact],
@@ -31,7 +45,8 @@ const projects = [
   },
   {
     name: "AScribe",
-    description: "An AI-powered study assistant that processes uploaded notes to generate summaries, flashcards, and quizzes using cloud-based OCR and large language models.",
+    description:
+      "An AI-powered study assistant that processes uploaded notes to generate summaries, flashcards, and quizzes using cloud-based OCR and large language models.",
     href: "https://github.com/gabnash05/ascribe-old",
     technologies: [
       ["React", SiReact],
@@ -47,7 +62,8 @@ const projects = [
   },
   {
     name: "Pixel Pursuit",
-    description: "Cross-platform scavenger hunt app where players scan QR codes to earn points and compete on live leaderboards.",
+    description:
+      "Cross-platform scavenger hunt app where players scan QR codes to earn points and compete on live leaderboards.",
     href: "https://github.com/gabnash05/pixel-pursuit",
     technologies: [
       ["React Native (Expo)", SiExpo],
@@ -61,7 +77,8 @@ const projects = [
   },
   {
     name: "UtiliTrack",
-    description: "A desktop application designed for rental property owners to track, manage, and analyze utility expenses across their units. ",
+    description:
+      "A desktop application designed for rental property owners to track, manage, and analyze utility expenses across their units. ",
     href: "https://github.com/KnightmareLeon/residential-rentals-utilities-tracker",
     technologies: [
       ["PyQt", SiQt],
@@ -74,7 +91,8 @@ const projects = [
   },
   {
     name: "Lexis",
-    description: "A simple student information system for managing student profiles, college departments, and academic programs",
+    description:
+      "A simple student information system for managing student profiles, college departments, and academic programs",
     href: "https://github.com/gabnash05/ssis-web",
     technologies: [
       ["Vue.js", SiVuedotjs],
@@ -97,12 +115,12 @@ const projects = [
     background: "/projects/cubetimer-1.png",
     hoverBackground: "/projects/cubetimer-1.png",
   },
-]
+];
 
-export default function Projects() {
+export default function ProjectsSection() {
   return (
     <section id="projects" className="scroll-mt-16 py-16">
-      <h2 className="font-heading text-3xl font-bold mb-8">Projects</h2>
+      <h2 className="font-heading mb-8 text-3xl font-bold">Projects</h2>
       <BentoGrid className="grid-cols-2">
         {projects.map((project) => (
           <BentoCard
@@ -119,5 +137,5 @@ export default function Projects() {
         ))}
       </BentoGrid>
     </section>
-  )
+  );
 }
