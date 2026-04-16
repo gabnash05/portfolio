@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Noto_Sans, Roboto_Slab } from "next/font/google";
 
+import { ShootingStars } from "@/components/ui/shooting-stars";
 import { Navbar } from "@/components/layout/Navbar";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -52,10 +53,24 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          <main className="mx-auto w-full max-w-4xl flex-1 px-4">{children}</main>
+          <ShootingStars
+            className="pointer-events-none fixed inset-0 z-0"
+            starColor="#000000"
+            trailColor="#87ceeb"
+            darkStarColor="#87ceeb"
+            darkTrailColor="#ffffff"
+            starWidth={12}
+            starHeight={1.5}
+            minSpeed={30}
+            maxSpeed={60}
+          />
 
-          <Toaster position="top-right" />
+          <div className="relative z-10 flex min-h-full flex-col">
+            <Navbar />
+            <main className="mx-auto w-full max-w-4xl flex-1 px-4">{children}</main>
+
+            <Toaster position="top-right" />
+          </div>
         </ThemeProvider>
       </body>
     </html>

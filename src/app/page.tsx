@@ -22,7 +22,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="min-h-lh py-5">
+      <section id="contact" className="min-h-lh py-15">
         <ContactSection />
       </section>
     </>

@@ -14,7 +14,7 @@ export default function AboutSection() {
 
         {/* TEXT CONTENT */}
         <div className="order-2 flex-1 text-center md:order-1 md:text-left">
-          <h1 className="font-heading mb-4 text-4xl font-bold">Hi, I&apos;m Gab</h1>
+          <h1 className="font-heading mb-4 text-4xl font-bold">Hi, I&apos;m Gab!</h1>
 
           <p className="mx-auto my-5 max-w-[40rem] leading-relaxed font-light md:mx-0">
             I&apos;m a 21 year old Aspiring Software Engineer from the Philippines

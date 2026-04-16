@@ -119,7 +119,7 @@ export default function ContactSection() {
         </div>
 
         {/* RIGHT - CONTACT LINKS */}
-        <div className="flex min-w-0 flex-col justify-center gap-4 text-sm md:flex-1">
+        <div className="flex min-w-0 flex-col justify-center text-sm md:flex-1">
           <ContactItem
             icon={<FaEnvelopeOpen className="h-4 w-4 shrink-0" />}
             label="Email"
@@ -167,7 +167,7 @@ function ContactItem({
   return (
     <a
       href={href}
-      className="hover:bg-muted flex items-center gap-3 rounded-md border p-3 transition focus:outline-none"
+      className="hover:bg-muted flex items-center gap-3 rounded-md border-none p-3 transition focus:outline-none"
       target="_blank"
       rel="noopener noreferrer"
     >
