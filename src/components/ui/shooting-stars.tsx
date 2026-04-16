@@ -1,5 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 import React, { useEffect, useState, useRef } from "react";
 
 interface ShootingStar {
@@ -19,6 +20,8 @@ interface ShootingStarsProps {
   maxDelay?: number;
   starColor?: string;
   trailColor?: string;
+  darkStarColor?: string;
+  darkTrailColor?: string;
   starWidth?: number;
   starHeight?: number;
   className?: string;
@@ -41,6 +44,7 @@ const getRandomStartPoint = () => {
       return { x: 0, y: 0, angle: 45 };
   }
 };
+
 export const ShootingStars: React.FC<ShootingStarsProps> = ({
   minSpeed = 10,
   maxSpeed = 30,
@@ -48,12 +52,19 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
   maxDelay = 4200,
   starColor = "#9E00FF",
   trailColor = "#2EB9DF",
+  darkStarColor = "#9E00FF",
+  darkTrailColor = "#2EB9DF",
   starWidth = 10,
   starHeight = 1,
   className,
 }) => {
   const [star, setStar] = useState<ShootingStar | null>(null);
   const svgRef = useRef<SVGSVGElement>(null);
+  const { resolvedTheme } = useTheme();
+
+  const isDark = resolvedTheme === "dark";
+  const activeStarColor = isDark ? darkStarColor : starColor;
+  const activeTrailColor = isDark ? darkTrailColor : trailColor;
 
   useEffect(() => {
     const createStar = () => {
@@ -134,10 +145,13 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
       )}
       <defs>
         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style={{ stopColor: trailColor, stopOpacity: 0 }} />
+          <stop
+            offset="0%"
+            style={{ stopColor: activeTrailColor, stopOpacity: 0 }}
+          />
           <stop
             offset="100%"
-            style={{ stopColor: starColor, stopOpacity: 1 }}
+            style={{ stopColor: activeStarColor, stopOpacity: 1 }}
           />
         </linearGradient>
       </defs>

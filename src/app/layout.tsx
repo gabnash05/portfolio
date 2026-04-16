@@ -62,7 +62,7 @@ export default function RootLayout({
             starWidth={12}
             starHeight={1.5}
             minSpeed={30}
-            maxSpeed={60}
+            maxSpeed={50}
           />
 
           <div className="relative z-10 flex min-h-full flex-col">
