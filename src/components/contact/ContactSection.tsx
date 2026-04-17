@@ -138,7 +138,7 @@ export default function ContactSection() {
             icon={<FaLinkedin className="h-4 w-4 shrink-0" />}
             label="FaLinkedin"
             value="Kim Gabriel (Gab) Nasayao"
-            href="https://FaLinkedin.com/in/kim-gabriel-nasayao"
+            href="https://linkedin.com/in/kim-gabriel-nasayao"
           />
 
           <ContactItem
